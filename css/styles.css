@@ -17,6 +17,7 @@ body{
 	margin-top: -70px;
 	margin-bottom: 30px
 }
+
 input[type="text"],input[type='password']{
 	width: 150px;
 	height: 35px;
@@ -61,4 +62,38 @@ input[type="text"],input[type='password']{
 .topmenu {
   float: left;
   font-family: 'Lato', sans-serif;
+}
+.email_b{
+	position: relative;
+}
+.email_b:before {
+	font-family: "FontAwesome";
+	content: "\f003";
+	position: absolute;
+	left: 4px;
+	top: 50%;
+	transform: translateY(-50%);
+}
+
+.pass_b{
+	position: relative;
+}
+.pass_b:before {
+	font-family: "FontAwesome";
+	content: "\f023";
+	position: absolute;
+	left: 4px;
+	top: 50%;
+	transform: translateY(-50%);
+}
+.topnav{
+	background-color: #33363a;
+	height: 50px;
+}
+
+.brand{
+	position: absolute;
+    left: 50%;
+    margin-left: -50px !important;  /* 50% of your logo width */
+    display: block;
 }

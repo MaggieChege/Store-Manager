@@ -9,23 +9,33 @@
 	<link rel="stylesheet" type="text/css" href="css/font-awesome.css"></link>
 	</head>
 <body>
+	<div class = 'topnav' id="mytopnav">
+		<a class="brand" href="#">
+		<img src="img/newlogo.png" style="height: 40px;"> 
+		</div>
+	</a>
 <div class="container">
 	<fieldset>
 	<legend align="right"><b>Login</b></legend>
 	<form>
 		<img src="img/user_avatar.png">
 		<div class="form-input">
-			<input type="text" name="email" placeholder="Enter email">
-			<i class="\f003"></i>
+			<label class="email_b">
+			<input type="text" name="email" placeholder="Enter email" id="envelope">
+
+			</label>
 		</div>
 		<div class="form-input">
+			<label class="pass_b">
 			<input type="password" name="password" placeholder="Enter password" class="fa-lock">
-			<!-- <i class="fa-lock-align-center"></i> -->
+			</label>
 		</div>
-		<input type="submit" name="submit" value="LOGIN" class="btn-login">
+		<a href="www.google.com"><button value="login" class="btn-login">LOGIN </button></a>
+		<!-- <input type="submit" name="submit" value="LOGIN" class="btn-login" onclick="window.location.href ="http://www.stackoverflow.com/"> -->
 
 	</form>
 	</fieldset>
 </div>
+
 </body>
 </html>
