@@ -1,11 +1,15 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<title>login</title>
+	<title>ADD PRODUCTS</title>
+	
 	<link rel="stylesheet" type="text/css" href="css/styles.css"></link>
 	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.css">
 	<link rel="stylesheet" type="text/css" href="css/font-awesome.css"></link>
+	<script src="http://code.jquery.com/jquery-latest.min.js" type="text/javascript"></script>
+	<script src="new.js"></script>
 </head>
+
 <body>
 	<style>
 		/* Full-width input fields */
@@ -36,7 +40,6 @@ button {
     margin: 8px 0;
     border: none;
     cursor: pointer;
-    width: 100%;
     opacity: 0.9;
 }
 
@@ -66,7 +69,7 @@ button:hover {
 .clearfix::after {
     content: "";
     clear: both;
-        display: table;
+    display: table;
 }
 
 /* Change styles for cancel button and signup button on extra small screens */
@@ -82,7 +85,8 @@ button:hover {
 			<img src="img/newlogo.png" style="height: 40px;"> 
 		</a>
 		<input type="search" class="mysearch" placeholder="search">
-		
+		<a href="#"><button value="login" class="btn-login" style="float: right; margin-left: 20px;">ADMIN </button></a>
+		<a href="#"><button value="login" class="btn-login" style="float: right;">LOGOUT </button></a>
 		<a class="cart" href="#">
 			<img src="img/cart.png" style="height: 40px; float: right; padding-right: 30px;">
 		</a>
@@ -92,14 +96,15 @@ button:hover {
 			<div id="cssmenu">
 				<ul>
 					<li><a href='#'>Home</a></li>
-					<li class ="active has-sub"><a href="">ADD NEW ATTENDANT</a>
+					<li><a href="">ADD NEW ATTENDANT</a>
 					</li>
 					<li><a href = "#">VIEW SALES</a></li>
+					<li><a href = "#">ADD PRODUCTS</a></li>
 				</ul>
 			</div>
 		</div>
 
-				<div class="main">
+		<div class="main">
 			
 			<div class="card-container">
 				<div class="card" style="border-color: #1c9797;"">
@@ -125,47 +130,52 @@ button:hover {
 					<div class="img">
 					</div>
 					<h5>Item Name</h5>
-					
 					<h4 style="color: #666666;">OUT OF STOCK!!! </h4>
 
 				</div>
 			</div>
 		</div>
-	<form>
-		<div class="container" style="margin-top: 100px;">
-			<h1>Add New Attendant</h1>
-			<p>Please fill in this form to create a New Attendant.</p>
-			<hr>
-			<label for="name"><b>name</b></label>
+
+		<form>
+		<div class="container" style="margin-top: 100px">
+			<h1>Add New Product</h1>
+						<hr>
+			<br>
+			<label for="name"><b>Product ID</b></label>
+			<br>
 			<input type="text" placeholder="Enter name" name="name" required>
-			<label for="email"><b>Email</b></label>
-			<input type="text" placeholder="Enter Email" name="email" required>
+			<br>
+			<label for="Product Name"><b>Product Name</b></label>
+			<input type="text" placeholder="Enter Product Name" name="email" required>
+			<br>
+			<label for="name"><b>Quantity</b></label>
+			<br>
+			<input type="text" placeholder="Enter Quantity" required>
+			<br>
+			<label for="name"><b>Price</b></label>
+			<br>
+			<input type="text" placeholder="Enter Price" required>
+			<br>
+			<label for="name""><b>Select Category</b></label>
 
-			<label for="psw"><b>Password</b></label>
-			<input type="password" placeholder="Enter Password" name="psw" required>
-
-			<label for="psw-repeat"><b>Repeat Password</b></label>
-			<input type="password" placeholder="Repeat Password" name="psw-repeat" required>
-
-			<label>
-				<input type="checkbox" checked="checked" name="remember" style="margin-bottom:15px"> Remember me
-			</label>
-
-			<p>By creating an account you agree to our <a href="#" style="color:dodgerblue">Terms & Privacy</a>.</p>
-
-			<div class="clearfix" style="margin-bottom: 140px;">
-				<button type="button" class="cancelbtn">Save</button>
+			<select type="text">
+				<option>Men Shoes</option>
+				<option>Women Shoes</option>
+			</select>
+			<br>
+			<div class="Save">
+				<button type="button" class="Save" style="margin-bottom: 150px; margin-top: 30px;">Save</button>
 			</div>
 		</div>
 
 	</form>
-</div>
-<footer>
+	</div>
+	<footer>
 		<h5>© 2018 COPYRIGHT
 			<span>-</span>
 			CREATED BY MAGGIE CHEGE
 		</h5>
 	</footer>
 </body>
-</html>
 
+</html>
