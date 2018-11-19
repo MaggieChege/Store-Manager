@@ -90,7 +90,8 @@ button:hover {
 					<li><a href="attendant.html">ADD NEW ATTENDANT</a>
 					</li>
 					<li><a href = "viewsales.html">VIEW SALES</a></li>
-					<li><a href = "add_prodcut.html">ADD PRODUCT</a></li>
+					<li><a href = "add_product.html">ADD PRODUCT</a></li>
+					<li><a href = "view_products.html">VIEW PRODUCT</a></li>
 				</ul>
 			</div>
 		</div>
@@ -125,27 +126,33 @@ button:hover {
 				</div>
 			</div>
 		</div>
-	<form id="add_new_product">
+	<form action="" method="POST" >
 		<div class="container" style="margin-top: 30px;">
 			<h1>Add New PRODUCT to store</h1>
 
 			<hr>
-			<label for="name"><b>Product Name</b></label>
-			<input type="text" placeholder="Enter Product Name"  id="product_name" name="name" required>
-			<label for="email"><b>Category</b></label>
-			<input type="text" placeholder="Enter Category" id="category" name="email" required>
-			<label for="name"><b>price</b></label>
-			<input type="text" placeholder="Enter price" id="price" name="role" required>
-			<label for="psw"><b>Quantity</b></label>
-			<input type="password" id="quantity" placeholder="Enter Quantity" name="psw" required>
+			<label for="product_name"><b>Product Name</b></label>
+			<input type="text" placeholder="Enter Product Name"  id="product_name"  required>
+			
+			<label for="category"><b>Category</b></label>
+			<input type="text" placeholder="Enter Category" id="category"  required>
+			<br>
+			<label for="price"><b>Price</b></label><br>
+			<input type="number" placeholder="Enter price" id="price" required>
+			<br>
+			<label for="quantity"><b>Quantity</b></label><br>
+			<input type="number" id="quantity" placeholder="1"  required>
 			<!-- <label for="psw-repeat"><b>Repeat Password</b></label>
 			<input type="password" placeholder="Repeat Password"  id="check_password" name="psw-repeat" required> -->
-			<label>
+			<!-- <label>
 				<input type="checkbox" checked="checked" name="remember" style="margin-bottom:15px"> Remember me
-			</label>
-			<p>By creating an account you agree to our <a href="#" style="color:dodgerblue">Terms & Privacy</a>.</p>
+			</label -->
+			<div class="alert alert-danger" id="success_added" style="color: green">	</div>
+			<!-- <div class="alert alert-danger" id="error">	</div> -->
+			<div class="alert alert-danger" id="error" style="color:red;">	</div>
+
 			<div class="clearfix">
-				<input type="submit" id="add_new_product" class="cancelbtn" style="margin-bottom:120px">Save</button>
+				<Button id="add_new_product" class="cancelbtn" style="margin-bottom:120px">Save</button>
 			</div>
 			<strong id="success_added"></strong>
 			<strong id="error"></strong>
@@ -158,6 +165,8 @@ button:hover {
 			CREATED BY MAGGIE CHEGE
 		</h5>
 	</footer>
-	<script src="js/add_users.js"
+	<script src="js/add_products.js"></script>
+	<script src="js/token.js"></script>
+
 </body>
 </html>
