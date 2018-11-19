@@ -1,11 +1,3 @@
-function setToken(result){
-   return localStorage.setItem('token', result.body.token)
-}
-
-function getToken(){
-    token = localStorage.getItem('token');
-    return token;
-}
 
 document.getElementById('loginform').addEventListener('submit', loginform);
 
@@ -27,10 +19,18 @@ function loginform(e){
 		body:JSON.stringify({email:email,password:password}),
 	})
 	.then((res) => res.json().then(data => ({status: res.status, body: data})))
-	.then((res) => {
-		if(res.body.message == "User was logged in succesfully"){
-				setToken(res)
-				window.location.href = 'home.html'
+	.then((result) => {
+		console.log(result.body);
+		console.log(result.body.role);
+
+		if(result.body.role == "Admin"){
+				setToken(result)
+				window.location.href = 'admin.html'
+		}else if(result.body.role == "User"){
+			setToken(result)
+			window.location.href = 'home.html'
+
+		
 		}else{
 				document.getElementById('error').innerHTML = "Wrong Credentials";
 		}

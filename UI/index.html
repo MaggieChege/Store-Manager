@@ -25,31 +25,29 @@
 		<img src="img/user_avatar.png">
 		<div class="form-input">
 			<label class="email_b">
-			<input type="text" name="email" id="user_email" placeholder="Enter email" id="envelope">
+			<input type="text" name="email" id="user_email" placeholder="Enter email" id="envelope" required="">
 
 			</label>
 		</div>
 		<div class="form-input">
 			<label class="pass_b">
-			<input type="password" id="user_password" name="password" placeholder="Enter password" class="fa-lock">
+			<input type="password" id="user_password" name="password" placeholder="Enter password" class="fa-lock" required="">
 			</label>
 		</div>
 		<form>
 		<button id="login_users" value="login" class="btn-login">LOGIN </button></a>
 		</form>
-		<div class="alert alert-danger"  id="error">
+		<div class="alert alert-danger"  id="error" style="color:red;">
   <!-- <strong>Danger!</strong> Indicates a dangerous or potentially negative action. -->
 </div>
 
-		<form>
-		<button formaction ="admin.html" value="login" class="btn-login" style ="margin-top:40px;">ADMIN LOGIN </button></a>
-</form>
-		<!-- <input type="submit" name="submit" value="LOGIN" class="btn-login" onclick="window.location.href ="http://www.stackoverflow.com/"> -->
 
 	</form>
 
 	</fieldset>
 </div>
 <script src="js/login.js"></script>
+<script src="js/token.js"></script>
+
 </body>
 </html>
