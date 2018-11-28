@@ -1,46 +1,53 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
+	<meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
 	<title>New Attendant</title>
-	<link rel="stylesheet" type="text/css" href="css/styles.css"></link>
-	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.css">
+	<link rel="stylesheet" type="text/css" href="public/css/styles.css"></link>
+	<link rel="stylesheet" type="text/css" href="public/css/font-awesome.css"></link>
 
 
-	<link rel="stylesheet" type="text/css" href="css/font-awesome.css"></link>
+
+	<link rel="stylesheet" type="text/css" href="public/css/font-awesome.css"></link>
 	</head>
-<body style="background-image:url(img/14.png)">
+<body style="background-image:url(public/img/14.png)">
 	<div class = 'topnav' id="mytopnav">
 		<a class="brand" href="#">
-		<img src="img/newlogo.png" style="height: 40px;"> 
+		<img src="public/img/newlogo.png" style="height: 40px;">
 		</div>
 	</a>
 <div class="container">
 	<fieldset>
 	<legend align="right"><b>Login</b></legend>
-	<form>
-		<img src="img/user_avatar.png">
+	<form id="loginform">
+		<img src="public/img/user_avatar.png">
 		<div class="form-input">
 			<label class="email_b">
-			<input type="text" name="email" placeholder="Enter email" id="envelope">
+			<input type="text" name="email" id="user_email" placeholder="Enter email" id="envelope" required="">
 
 			</label>
 		</div>
 		<div class="form-input">
 			<label class="pass_b">
-			<input type="password" name="password" placeholder="Enter password" class="fa-lock">
+			<input type="password" id="user_password" name="password" placeholder="Enter password" class="fa-lock" required="">
 			</label>
 		</div>
 		<form>
-		<button formaction ="home.html" value="login" class="btn-login">LOGIN </button></a>
+		<button id="login_users" value="login" class="btn-login">LOGIN </button></a>
 		</form>
-		<form>
-		<button formaction ="admin.html" value="login" class="btn-login" style ="margin-top:40px;">ADMIN LOGIN </button></a>
-</form>
-		<!-- <input type="submit" name="submit" value="LOGIN" class="btn-login" onclick="window.location.href ="http://www.stackoverflow.com/"> -->
+		<div class="alert alert-danger"  id="error" style="color:red;">
+  <!-- <strong>Danger!</strong> Indicates a dangerous or potentially negative action. -->
+</div>
+
 
 	</form>
+
 	</fieldset>
 </div>
+<script src="public/js/login.js"></script>
+<script src="public/js/token.js"></script>
 
 </body>
 </html>

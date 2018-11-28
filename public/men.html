@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta http-equiv="X-UA-Compatible" content="ie=edge">
+	<title>Men's Footwear</title>
+
+	<link rel="stylesheet" type="text/css" href="css/styles.css"></link>
+	<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+	<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Karma">
+	<link rel="stylesheet" type="text/css" href="css/font-awesome.css"></link>
+	<script src="http://code.jquery.com/jquery-latest.min.js" type="text/javascript"></script>
+	<link rel="stylesheet" type="text/css" href="css/form.css">
+
+	<script src="js/new.js"></script>
+	<style>
+	.w3-bar-block .w3-bar-item {padding:20px}
+
+</style>
+</head>
+
+<body>
+
+	<div class = 'topnav' id="mytopnav">
+		<a class="brand" href="#">
+			<img src="img/newlogo.png" style="height: 40px;">
+		</a>
+		<input type="search" class="mysearch" placeholder="search">
+
+		<a class="cart" href="#">
+			<img src="img/cart.png" style="height: 40px; float: right; padding-right: 30px;">
+		</a>
+	</div>
+
+	<div id="cssmenu">
+		<ul>
+			<li><a href='index.html'>Home</a></li>
+			<li class ="active has-sub"><a href="">BUY</a>
+				<ul>
+					<li><a href = "men.html">MEN</a>
+					</li>
+					<li ><a href = "women.html">WOMEN</a>
+					</li>
+				</ul>
+			</li>
+			<li><a href = "viewsales.html">VIEW SALES</a></li>
+	</ul>
+	</div>
+
+<div class="main">
+		<div class="w3-main w3-content w3-padding"  >
+			<div class="w3-row-padding w3-padding-16 w3-center" id="food" style="width:1100px;" >
+			 <div class="w3-quarter">
+				<table id="my_products">
+					<tr>
+						<td>Product Name</td>
+						<td>Category</td>
+						<td>Quantity</td>
+						<td>Price</td>
+					</tr>
+				</table>
+				  </div>
+				</div>
+				</div>
+		</div>
+<br>
+<div id="myForm" class="form-popup">
+<div class="container">
+			<h1>Make Sale</h1>
+			<br>
+			<label style="display: none;"><b>product_id:</b></label><br>
+			<p id="myid"></p>
+			<input type="text" id="product_id" disabled><br>
+			<label for="quantity"><b>Quantity</b></label><br>
+			<input type="number"  id="quantity" placeholder="1" required><br>
+			<label for="attendant"><b>Attendant</b></label><br>
+			<input type="text"  id="attendant" placeholder="higi" required><br>
+	
+			
+			<div class="alert alert-danger" id="success_added" style="color: green">    </div>
+			<div class="alert alert-danger" id="error" style="color:red;">  </div>
+
+			<div class="clearfix">
+				<button id="sale" class="cancelbtn" style="margin-bottom:120px">Save </button>
+			</div>
+
+</div>
+</div>
+
+
+	<footer>
+		<h5>© 2018 COPYRIGHT
+			<span>-</span>
+			CREATED BY MAGGIE CHEGE
+		</h5>
+	</footer>
+
+	<script src="js/products.js"></script>
+	<script src="js/token.js"></script>
+
+</body>
+</html>
