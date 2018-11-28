@@ -20,8 +20,8 @@ function getToken(){
 }
 
 access_token = getToken()
-document.getElementById('add_new_user').addEventListener('click', signuploginform);
-function signuploginform(e){
+document.getElementById('add_new_user').addEventListener('click', SignUp);
+function SignUp(e){
 	e.preventDefault()
   
   // const signup_url = ;
@@ -55,7 +55,7 @@ function signuploginform(e){
       document.getElementById('error').innerHTML = "Wrong Credentials";
 		}else if(res.status ==500){
       document.getElementById('error').innerHTML = "Please Login";
-      window.setTimeout("location.href = 'index.html';",3000)
+      window.setTimeout("location.href = '../index.html';",3000)
     }
     else if(res.body.message == 'Email exists'){
       document.getElementById('error').innerHTML = res.body.message;

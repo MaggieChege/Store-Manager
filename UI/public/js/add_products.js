@@ -9,13 +9,13 @@ function getToken(){
 }
 
 access_token = getToken()
-document.getElementById('add_new_product').addEventListener('click',products)
-function products(e){
+document.getElementById('add_new_product').addEventListener('click',Products)
+function Products(e){
 	e.preventDefault()
   let product_name = document.getElementById("product_name").value;
 	let category = document.getElementById("category").value;
-  var quantity = document.getElementById("quantity").value;
-  var price = document.getElementById("price").value;
+  let quantity = parseInt(document.getElementById("quantity").value);
+  let price = parseInt(document.getElementById("price").value);
 
 
 
@@ -41,12 +41,15 @@ function products(e){
     console.log(result.body.data)
     if(result.status == 201){
       document.getElementById('success_added').innerHTML = result.body.message;
-      window.location.reload();
     }else if(result.status == 404){
             document.getElementById('error').innerHTML = result.body.message;
     }else if(result.status == 409){
             document.getElementById('error').innerHTML = result.body.message;
-    }else{
+    }else if(result.status == 500){
+      document.getElementById('error').innerHTML = "Please Login";
+      window.setTimeout("location.href = '../index.html';",3000)
+    }
+    else{
             document.getElementById('error').innerHTML = "something wrong happened";
         }
 })

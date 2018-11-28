@@ -69,8 +69,9 @@
 <div class="container">
 			<h1>Make Sale</h1>
 			<br>
-			<label for="product_name"><b>product_name</b></label><br>
-			<input type="text" id="product_name" placeholder="Enter product_name"required><br>
+			<label style="display: none;"><b>product_id:</b></label><br>
+			<p id="myid"></p>
+			<input type="text" id="product_id" disabled><br>
 			<label for="quantity"><b>Quantity</b></label><br>
 			<input type="number"  id="quantity" placeholder="1" required><br>
 			<label for="attendant"><b>Attendant</b></label><br>
@@ -78,7 +79,6 @@
 	
 			
 			<div class="alert alert-danger" id="success_added" style="color: green">    </div>
-			<!-- <div class="alert alert-danger" id="error">    </div> -->
 			<div class="alert alert-danger" id="error" style="color:red;">  </div>
 
 			<div class="clearfix">

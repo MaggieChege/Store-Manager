@@ -18,7 +18,7 @@
   	let result = `<tr>
    
     <th>Sale id</th>
-        <th>Product Name</th>
+    <th>Product id</th>
         <th>Price</th>
         <th>Quantity</th>
         <th>remaining_quantity</th>
@@ -30,7 +30,7 @@
           
                     <tr>
                     <td>${sales.sale_id}</td>
-                    <td>${sales.product_name}</td>
+                     <td>${sales.products_id}</td>
                     <td>${sales.price}</td>
                     <td>${sales.quantity}</td>
                     <td>${sales.remaining_quantity}</td>

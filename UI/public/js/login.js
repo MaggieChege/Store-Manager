@@ -1,7 +1,7 @@
 
-document.getElementById('loginform').addEventListener('submit', loginform);
+document.getElementById('loginform').addEventListener('submit', LoginForm);
 
-function loginform(e){
+function LoginForm(e){
 	e.preventDefault();
 	let url = 'http://127.0.0.1:5000/api/v2/users/login';
 	let email = document.getElementById('user_email').value;
@@ -25,14 +25,14 @@ function loginform(e){
 
 		if(result.body.role == "Admin"){
 				setToken(result)
-				window.location.href = 'admin.html'
+				window.location.href = 'public/admin.html'
 		}else if(result.body.role == "User"){
 			setToken(result)
-			window.location.href = 'home.html'
+			window.location.href = 'public/home.html'
 
 		
 		}else{
-				document.getElementById('error').innerHTML = "Wrong Credentials";
+				document.getElementById('error').innerHTML = result.body.message;
 		}
 })
 }

@@ -41,54 +41,21 @@
 		<div class="main">
 
 			<div class="card-container">
-				<div class="card" style="border-color: #1c9797;"">
-					<div class="img">
-					</div>
-					<h3> 20000 </h3>
-					<h4 style="color: #666666;">Total Sales </h4>
 
-				</div>
-				<div class="card" style="border-color: #23bebe;">
-					<div class="img">
-					</div>
-					<h3>500</h3>
-					<h4 style="color: #666666;">Daily sales </h4>
-				</div>
-				<div class="card" style="border-color: #ccffcc;">
-					<div class="img">
-					</div>
-					<H3>45</H3>
-					<h4 style="color: #666666;">Products </h4>
-				</div>
-				<div class="card" style="border-color: red; ">
-					<div class="img">
-					</div>
-					<h5>Item Name</h5>
 
-					<h4 style="color: #666666;">OUT OF STOCK!!! </h4>
-
-				</div>
-
-			</div>
-			<div id="success" style="color: green"></div>
-			<div id="error" style="color: red"></div>
-
-			<div style="margin-bottom: 140px;">
-
-			<table id="customers"></table>
-			
-		</div>
-
-		<div id="myForm" class="form-popup">
+						<div id="myForm" class="form-popupp">
 <div class="container">
 			<h1>Update Product</h1>
 			<br>
 			<hr>
+			<label for="product_id"><b>Product id</b></label>
+			<input type="text" placeholder="Enter Product Name"  id="product_id"  required>
+			<br>
 			<label for="product_name"><b>Product Name</b></label>
 			<input type="text" placeholder="Enter Product Name"  id="product_name"  required>
-			
+			<br>
 			<label for="category"><b>Category</b></label>
-			<input type="text" placeholder="Enter Category" id="category"  required>
+			<input type="text" placeholder="Enter Category" id="category" required>
 			<br>
 			<label for="price"><b>Price</b></label><br>
 			<input type="number" placeholder="Enter price" id="price" required>
@@ -101,13 +68,29 @@
 			<!-- <div class="alert alert-danger" id="error">    </div> -->
 			<div class="alert alert-danger" id="error" style="color:red;">  </div>
 
+			<button id="update_product" class="cancelbtn" style="margin-bottom:120px">Save </button>
+
+			<br>
+
 <!-- 			<div class="clearfix"> -->
-				<button id="update_product" class="cancelbtn" style="margin-bottom:120px">Save </button>
 			<!-- </div> -->
 
 </div>
 </div>
+				
 
+			</div>
+			<div id="success" style="color: green"></div>
+			<div id="error" style="color: red"></div>
+
+			<div style="margin-bottom: 140px;">
+
+			<table style="margin-top: 130px;" id="customers"></table>
+			
+		</div>
+
+
+				
 </div>
 </div>
 </div>
@@ -124,3 +107,4 @@
 	</body>
 
 	</html>
+   

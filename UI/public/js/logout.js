@@ -1,10 +1,10 @@
 function logout() {
     access_token = getToken()
     token_clear = localStorage.clear();
-    window.location.href = 'index.html'
+    window.location.href = '../index.html'
     // window.location.href = 'admin.html'
 }
-window.onload = function users(){
+window.onload = function Users(){
   let products_url = 'http://127.0.0.1:5000/api/v2/users';
 
 
