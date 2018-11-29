@@ -1,0 +1,30 @@
+{
+  "name": "Store-Manager",
+  "version": "1.0.0",
+  "description": "Store-Manager API",
+  "main": "Login.js",
+  "scripts": {
+    "start": "parcel *.html",
+    "test": "jest --watchAll",
+    "test:coverage": "npm test -- --coverage",
+    "test:badges": "npm run test:coverage  && jest-coverage-badges"
+  },
+  "keywords": [],
+  "author": "Maggie Chege",
+  "license": "ISC",
+  "devDependencies": {
+    "babel-preset-env": "^1.6.1",
+    "jest": "^22.4.4",
+    "parcel-bundler": "^1.7.0"
+  },
+  "jest": {
+    "coverageReporters": [
+      "json-summary",
+      "text",
+      "lcov"
+    ],
+    "setupFiles": [
+      "./FetchApiSetup.js"
+    ]
+  }
+}
