@@ -1,6 +1,6 @@
 # Store-Manager
 Store Manager is a web application that helps store owners manage sales and product inventory records. This application is meant for use in a single store.
-This is an implementation of the frontend which consumes API endpoints from https://storemanagerch3.herokuapp.com/
+This is an implementation of the frontend which consumes API endpoints from https://storemanager-v2.herokuapp.com/
 
 
 The app is Published at: https://maggiechege.github.io/Store-Manager/
