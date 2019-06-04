@@ -3,7 +3,7 @@ document.getElementById('loginform').addEventListener('submit', LoginForm);
 
 function LoginForm(e){
 	e.preventDefault();
-	let url = 'http://127.0.0.1:5000/api/v2/users/login';
+	let url = 'https://storemanagerch3.herokuapp.com/api/v2/users/login';
 	let email = document.getElementById('user_email').value;
 	let password = document.getElementById('user_password').value;
 
